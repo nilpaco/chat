@@ -1,0 +1,36 @@
+{
+  "relationships": [
+    {
+      "relationshipId": 1,
+      "relationshipName": "message",
+      "otherEntityName": "message",
+      "relationshipType": "one-to-one",
+      "otherEntityField": "id",
+      "ownerSide": true,
+      "otherEntityRelationshipName": "message"
+    },
+    {
+      "relationshipId": 2,
+      "relationshipName": "conversation",
+      "otherEntityName": "conversation",
+      "relationshipType": "many-to-one",
+      "otherEntityField": "id"
+    }
+  ],
+  "fields": [
+    {
+      "fieldId": 1,
+      "fieldName": "text",
+      "fieldType": "String"
+    },
+    {
+      "fieldId": 2,
+      "fieldName": "time",
+      "fieldType": "LocalDate"
+    }
+  ],
+  "changelogDate": "20160312094309",
+  "dto": "no",
+  "pagination": "pagination",
+  "service": "no"
+}
