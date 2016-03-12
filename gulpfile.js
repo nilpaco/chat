@@ -1,4 +1,4 @@
-// Generated on 2016-03-11 using generator-jhipster 2.27.1
+// Generated on 2016-03-12 using generator-jhipster 2.27.1
 /* jshint camelcase: false */
 'use strict';
 
