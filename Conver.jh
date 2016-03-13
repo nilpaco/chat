@@ -1,0 +1,29 @@
+entity Message {
+  id Long,
+  text String,
+  time LocalDate
+}
+entity Conversation {
+	id Long,
+	name String,
+}
+entity Space {
+  id Long,
+  name String,
+}
+relationship OneToMany {
+  Space{conversation} to Conversation{space(name)}
+}
+relationship OneToMany {
+  User{conversation} to Conversation{user(email)}
+}
+relationship OneToMany {
+  User{space} to Space{user(email)}
+}
+relationship OneToOne {
+  Message{message} to Message
+}
+relationship OneToMany {
+  Conversation{message} to Message{conversation}
+}
+paginate Conversation, Message, Space with pagination
