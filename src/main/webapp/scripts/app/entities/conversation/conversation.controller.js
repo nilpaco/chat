@@ -44,19 +44,12 @@ angular.module('conversationApp')
         };
 
         $scope.messages=[];
-        $scope.loadAll2 = function (){
-            Conversation.getMessagesFromConversation(function (result) {
-                $scope.messages = result;
-            });
-        }
-        $scope.loadAll2();
-
-        $scope.messages = [];
         $scope.load = function (id) {
-            Conversation.get({id: id}, function(result) {
+            Conversation.getMessagesFromConversation({id: id}, function(result) {
                 $scope.messages = result;
             });
         };
+
 
 
     });

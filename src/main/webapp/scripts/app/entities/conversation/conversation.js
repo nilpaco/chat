@@ -5,7 +5,7 @@ angular.module('conversationApp')
         $stateProvider
             .state('conversation', {
                 parent: 'entity',
-                url: '/conversations',
+                url: '/conversations/{id}',
                 data: {
                     authorities: ['ROLE_USER'],
                     pageTitle: 'conversationApp.conversation.home.title'
